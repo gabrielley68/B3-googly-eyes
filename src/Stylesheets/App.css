@@ -8,5 +8,73 @@
   left:0;
   width: 100%;
   height: 100%;
-  background-color: gray;
+  background-color: black;
+}
+
+.button-stop{
+  position: relative;
+  z-index: 2;
+  background-color: red;
+  color: black;
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+.modal {
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: ghostwhite;
+    z-index:3;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    font-size: 1.5em;
+    transition : opacity 1s ease-in-out , visibility 1s;
+}
+
+.modal.open {
+    visibility: visible;
+    opacity: 0.8;
+    transition: opacity 1s ease-in-out, visibility 0s;
+}
+
+.modal > p{
+    margin: auto;
+}
+
+.button-info {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: dodgerblue;
+    width: 50px;
+    height: 50px;
+    z-index:4;
+    border: none;
+    color: white;
+    font-size: 32px;
+}
+
+.button-reset {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: dodgerblue;
+    width: 50px;
+    height: 50px;
+    z-index:4;
+    border: none;
+    color: white;
+    font-size: 32px;
+}
+
+.button-info:hover{
+    background-color: royalblue;
 }
